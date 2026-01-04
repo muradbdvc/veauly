@@ -19,7 +19,7 @@ const Featured = () => {
             <div>Aug 19, 2025</div>
           </div>
         </div>
-        <div className="overflow-hidden relative rounded-lg my-8 absolute top-0 left-0">
+        <div className="overflow-hidden hidden relative rounded-lg my-8 absolute top-0 left-0">
           <img src={branding1} alt="branding1" />
           <div className="absolute top-1/3 left-3/7 text-white text-center">
             <h2>Reisfell</h2>
@@ -29,7 +29,7 @@ const Featured = () => {
             <div>Aug 19, 2025</div>
           </div>
         </div>
-        <div className="overflow-hidden relative rounded-lg">
+        <div className="overflow-hidden hidden relative rounded-lg">
           <img src={technology} alt="technology" />
           <div className="absolute top-1/3 left-3/7 text-white text-center">
             <h2>Reisfell</h2>
@@ -39,7 +39,7 @@ const Featured = () => {
             <div>Aug 19, 2025</div>
           </div>
         </div>
-        <div className="overflow-hidden relative rounded-lg">
+        <div className="overflow-hidden hidden relative rounded-lg">
           <img src={identity} alt="identity" />
           <div className="absolute top-1/3 left-3/7 text-white text-center">
             <h2>Reisfell</h2>

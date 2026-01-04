@@ -73,3 +73,9 @@
 .custom {
   @apply bg-linear-to-tl from-zinc-950 to-blue-800;
 }
+.about {
+  @apply bg-linear-to-tl from-blue-700 to-zinc-700 font-outfit p-12 rounded-3xl;
+}
+.metrics {
+  @apply bg-linear-to-t from-blue-700 to-zinc-700 font-outfit p-6 rounded-3xl;
+}

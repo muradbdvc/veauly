@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="w-full hero-section">
       <div></div>
       <div className="h-screen">
-        <h1 className="absolute top-2/5 left-1/3 text-9xl text-white font-light Beautiquedisplay">
+        <h1 className="absolute hero-header top-2/3 left-1/3 text-white font-light Beautiquedisplay">
           Veauly
         </h1>
         <div className="flex justify-around mt-40 -mx-30">

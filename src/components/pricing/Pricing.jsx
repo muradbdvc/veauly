@@ -3,7 +3,7 @@ import "./pricing.scss";
 
 const Pricing = () => {
   return (
-    <div className="container text-black h-screen gap-y-5">
+    <div className="container text-black max-h-dvw gap-y-5 block my-20">
       <div className="text-center">
         <h3>Pricing Plans</h3>
         <p>Clear, transparent pricing for every stage.</p>
