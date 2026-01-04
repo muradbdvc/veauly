@@ -1,0 +1,75 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --font-beautique: "Beautiquedisplay";
+
+  --color-violet: #1e179d;
+  --color-black: #000000;
+  --color-violet-dark: #110d5a;
+  --color-White-lite: #ffffff30;
+}
+
+@font-face {
+  font-family: "Beautiquedisplay";
+  src: url("./assets/08ee0bdd19b93bb20a3ce6c8be5ebf8b.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-[#FDFDFF] text-gray-600 font-beautique;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply px-4 mx-auto md:px-8 lg:px-14 2xl:max-w-screen-2xl;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold leading-[1.2] text-balance text-gray-900;
+  }
+  h2 {
+    @apply text-2xl lg:text-3xl;
+  }
+  h3 {
+    @apply text-lg sm:text-xl text-white;
+  }
+  p {
+    @apply text-sm sm:text-base text-pretty;
+  }
+  .subtitle {
+    @apply text-red-500 font-semibold tracking-wider uppercase text-sm;
+  }
+  .section {
+    @apply pt-20 lg:pt-32 xl:pt-36;
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-cyan-700 text-white rounded-xl px-5 py-2.5 lg:px-6 lg:py-3 hover:bg-cyan-900 transition-colors;
+  }
+}
+.card {
+  @apply bg-linear-to-bl from-violet-500 to-fuchsia-500 text-center p-12 rounded-3xl;
+}
+.pricing {
+  @apply p-10 rounded-sm text-white text-xl;
+}
+.custom {
+  @apply bg-linear-to-tl from-zinc-950 to-blue-800;
+}
