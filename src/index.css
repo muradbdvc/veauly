@@ -79,3 +79,6 @@
 .metrics {
   @apply bg-linear-to-t from-blue-700 to-zinc-700 font-outfit p-6 rounded-3xl;
 }
+.footer {
+  @apply bg-linear-to-b from-blue-700 to-zinc-700 font-outfit p-6 rounded-3xl;
+}
