@@ -44,9 +44,9 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </BrowserRouter>
+          <Hero />
         </section>
       </header>
-      <Hero />
       <Featured />
       <Testimonial />
       <Pricing />
