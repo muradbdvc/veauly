@@ -83,5 +83,5 @@
   @apply bg-linear-to-b from-blue-700 to-zinc-700 font-outfit p-6 rounded-3xl;
 }
 .footer-brand-name {
-  @apply bg-linear-to-b from-blue-700 to-zinc-700 bg-clip-text text-transparent;
+  @apply bg-linear-to-r from-blue-700 to-zinc-900 bg-clip-text text-transparent;
 }

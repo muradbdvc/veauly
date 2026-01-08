@@ -1,10 +1,15 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+
+//shareing
 import { navItems } from "./data";
 import Hero from "./components/hero/Hero";
 import Testimonial from "./components/testimonial/Testimonial";
 import Pricing from "./components/pricing/Pricing";
 import Featured from "./components/featured/Featured";
+import AboutUs from "./components/aboutus/AboutUs";
+
+//pages
 import About from "./components/pages/About";
 import Footer from "./components/footer/Footer";
 import Home from "./components/pages/Home";
@@ -50,7 +55,7 @@ function App() {
       <Featured />
       <Testimonial />
       <Pricing />
-      <About />
+      <AboutUs />
       <Footer />
       <p className="m-9">Hello</p>
     </div>
