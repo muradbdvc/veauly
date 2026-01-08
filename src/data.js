@@ -9,22 +9,22 @@ export const navItems = [
   {
     id: 1,
     label: "Home",
-    url: "#home",
+    url: "/",
   },
   {
     id: 2,
     label: "About us",
-    url: "#about",
+    url: "/about",
   },
   {
     id: 3,
     label: "Works",
-    url: "#works",
+    url: "/works",
   },
   {
     id: 4,
     label: "Contact",
-    url: "#contact",
+    url: "/contact",
   },
 ];
 

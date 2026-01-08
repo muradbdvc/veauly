@@ -10,6 +10,11 @@ const Footer = () => {
           View Project
         </button>
       </div>
+      <section>
+        <div className="fixed-footer py-36 mx-16">
+          <h1 className="text-3xl text-black">Veauly Studio</h1>
+        </div>
+      </section>
     </>
   );
 };
