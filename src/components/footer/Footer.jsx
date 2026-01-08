@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <>
       <div className="footer h-screen content-center mx-auto">
-        <h1 className="mx-auto">Let's Talk</h1>
-        <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-white hover:text-black border border-black transition-all duration-300 font-outfit uppercase text-xs tracking-widest">
+        <h1 className="mx-auto text-white">Let's Talk</h1>
+        <button className="bg-white text-black px-6 py-2 rounded-full hover:bg-white hover:text-black border border-black transition-all duration-300 font-outfit uppercase text-xs tracking-widest">
           View Project
         </button>
       </div>
