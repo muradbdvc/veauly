@@ -10,3 +10,12 @@
   margin: 66px 0;
   font-size: 26px;
 }
+.metrics {
+  display: flex;
+  flex-direction: column;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: 180% 100%;
+  }
+}

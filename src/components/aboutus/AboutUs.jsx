@@ -4,7 +4,7 @@ import about from "../../assets/about.avif";
 
 const AboutUs = () => {
   return (
-    <div className="h-screen container block my-20">
+    <div className="h-screen container my-20 p-4 overflow-hidden">
       <div className="aboutus-title text-black mx-auto">Why Work With Us</div>
       <div className="flex gap-5">
         <div className="grow rounded-lg about">
@@ -23,7 +23,10 @@ const AboutUs = () => {
         </div>
         <div className="metrics">
           <h3>Metrics</h3>
-          <img src={about} alt="" />
+          <img src={about} alt="" className="scale-250" />
+          <img src="" alt="" />
+          <img src="" alt="" />
+          <img src="" alt="" />
         </div>
       </div>
     </div>
