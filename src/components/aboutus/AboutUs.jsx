@@ -24,9 +24,14 @@ const AboutUs = () => {
         <div className="metrics">
           <h3>Metrics</h3>
           <img src={about} alt="" className="scale-250" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+          <div className="clint-review">
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <div>
+              <span>2M+</span>Happy clients.
+            </div>
+          </div>
         </div>
       </div>
     </div>
