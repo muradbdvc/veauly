@@ -31,7 +31,7 @@
 
 @layer utilities {
   .container {
-    @apply px-4 mx-auto md:px-8 lg:px-14 2xl:max-w-screen-2xl;
+    @apply px-3 mx-auto md:px-3 lg:px-4 2xl:max-w-7xl;
   }
   button {
     @apply cursor-pointer;
@@ -81,6 +81,22 @@
 }
 .footer {
   @apply bg-linear-to-b from-blue-700 to-zinc-700 font-outfit p-6 rounded-3xl;
+}
+
+/* Global navbar styles */
+.navbar_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+}
+
+/* About page styles */
+.about-page {
+  min-height: 100vh;
+  padding-top: 80px; /* Account for fixed navbar */
 }
 .footer-brand-name {
   @apply bg-linear-to-r from-blue-700 to-zinc-900 bg-clip-text text-transparent;

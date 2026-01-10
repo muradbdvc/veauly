@@ -1,21 +1,98 @@
-.about,
-.metrics {
-  h3 {
-    color: aliceblue;
-    font-size: 3em;
-  }
-}
 .aboutus-title {
   text-align: center;
   margin: 66px 0;
   font-size: 26px;
 }
-.metrics {
+
+.wrap-content {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.cardabout {
+  flex: 1;
+  background: #4f47d6;
+  background-image: radial-gradient(circle farthest-corner at 100% 100%, #4f47d6 44%, #201919);
+  border-radius: 1.25rem;
+  padding: 3rem;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  
+  &.orange {
+    background: #4f47d6;
+    background-image: linear-gradient(180deg, #201919, #4f47d6);
+  }
+}
+
+.content-wrap {
   display: flex;
   flex-direction: column;
-  img {
-    max-width: 100%;
-    object-fit: cover;
-    object-position: 180% 100%;
+  height: 100%;
+}
+
+.content-card {
+  margin-bottom: 2rem;
+}
+
+.paragraphabout-2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  
+  &.metrics {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
+}
+
+.textsmall {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  
+  &.alignleft {
+    text-align: left;
+  }
+}
+
+.whyusdiv {
+  margin-top: auto;
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.review-wrap {
+  text-align: center;
+}
+
+.profile-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }

@@ -1,30 +1,50 @@
-import React from "react";
-import { navItems } from "./data";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import "./Navbar.scss";
-import { Home, About, Work, Contact } from "../pages";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { navItems } from '../../data';
+import './Navbar.scss';
 
 const Navbar = () => {
   return (
-    <div>
-      <BrowserRouter>
-        {/** Mobile Menu */}
-        <nav className="flex justify-center mx-auto absolute right-0 top-0 left-0 pt-8">
-          <ul className="flex flex-raw space-x-10 rounded-4xl pl-5 border-2 border-White-lite">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <Link href={item.url}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="navbar_wrapper">
+      {/* Logo Section */}
+      <div className="navbar__logo-wrap-2">
+        <NavLink to="/" className="navbar__link btn-wrap w-inline-block">
+          <div className="text-block-2">Veauly</div>
+        </NavLink>
+      </div>
+ 
+      {/* Navigation Menu */}
+      <div className="navbar_outline">
+        <div className="nav-wrapper glowing-wrapper-active menu">
+          <nav className="menu">
+            <ul className="navroad menu">
+              {navItems.map((item, index) => {
+                return (
+                  <li key={item.id}>
+                    {item.label === 'Contact' ? (
+                      <NavLink 
+                        to="/contact" 
+                        className="button-contact w-inline-block"
+                      >
+                        <div className="button__inner">
+                          <div className="button__text">{item.label}</div>
+                        </div>
+                      </NavLink>
+                    ) : (
+                      <NavLink 
+                        to={item.url} 
+                        className="navbar_button w-inline-block"
+                      >
+                        <div className="navbar_button-text">{item.label}</div>
+                      </NavLink>
+                    )}  
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
   );
 };

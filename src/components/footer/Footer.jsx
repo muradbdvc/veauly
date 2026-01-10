@@ -6,7 +6,10 @@ const Footer = () => {
     <>
       <div className="footer h-screen content-center px-auto">
         <h1 className="mx-auto text-white">Let's Talk</h1>
-        <button className="bg-white text-black px-6 py-2 mx-auto rounded-full hover:bg-white hover:text-black border border-black transition-all duration-300 font-outfit uppercase text-xs tracking-widest">
+        <button
+          className="bg-white text-black px-10 py-6 mx-auto rounded-full hover:bg-white hover:text-black border border-black transition-all duration-300 font-outfit uppercase text-xs tracking-widest font-bold
+font-extrabold"
+        >
           Start
         </button>
       </div>
