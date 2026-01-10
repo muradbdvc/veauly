@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, Button } from "../ui";
 
 const About = () => {
   return (
@@ -9,17 +10,22 @@ const About = () => {
           We are a creative studio that transforms bold ideas into standout brands through strategy, design, and marketing.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-800 p-6 rounded-lg">
+          <Card variant="elevated" padding="large">
             <h2 className="text-2xl font-semibold text-white mb-4">Our Mission</h2>
             <p className="text-gray-300">
               To create meaningful, lasting connections between brands and their audiences through innovative design and strategic marketing.
             </p>
-          </div>
-          <div className="bg-gray-800 p-6 rounded-lg">
+          </Card>
+          <Card variant="outlined" padding="large">
             <h2 className="text-2xl font-semibold text-white mb-4">Our Vision</h2>
             <p className="text-gray-300">
-              To be the leading creative studio that pushes boundaries of design and technology to deliver exceptional experiences.
+              To be a leading creative studio that pushes boundaries of design and technology to deliver exceptional experiences.
             </p>
+          </Card>
+          <div className="text-center mt-8">
+            <Button variant="primary" size="large">
+              Learn More About Our Studio
+            </Button>
           </div>
         </div>
       </div>

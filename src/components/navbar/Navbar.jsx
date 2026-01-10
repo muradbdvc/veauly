@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { navItems } from '../../data';
 import './Navbar.scss';
 
-const Navbar = () => {
+const Navbar = ({ className: wrapperClassName = '' }) => {
   return (
-    <div className="navbar_wrapper">
+    <div className={`navbar_wrapper ${wrapperClassName}`}>
       {/* Logo Section */}
       <div className="navbar__logo-wrap-2">
         <NavLink to="/" className="navbar__link btn-wrap w-inline-block">
@@ -47,6 +48,10 @@ const Navbar = () => {
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  className: PropTypes.string,
 };
 
 export default Navbar;

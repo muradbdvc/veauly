@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import Hero from "./components/hero/Hero";
 import Testimonial from "./components/testimonial/Testimonial";
 import Pricing from "./components/pricing/Pricing";
@@ -7,87 +8,110 @@ import Featured from "./components/featured/Featured";
 import AboutUs from "./components/aboutus";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import ErrorBoundary from "./components/ui/ErrorBoundary";
 
 //pages
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Work from "./components/pages/Work";
-import Contact from "./components/pages/Contact";
+const Home = lazy(() => import("./components/pages/Home"));
+const About = lazy(() => import("./components/pages/About"));
+const Work = lazy(() => import("./components/pages/Work"));
+const Contact = lazy(() => import("./components/pages/Contact"));
 
 function HomeLayout() {
   return (
-    <div className="min-h-screen overflow-hidden text-white scroll-auto">
-      {/* Navbar */}
-      <Navbar />
-      
-      {/* Hero Section */}
-      <Hero />
-      
-      {/* Other Sections */}
-      <Featured />
-      <Testimonial />
-      <Pricing />
-      <AboutUs />
-      <Footer />
-    </div>
+    <ErrorBoundary>
+      <div className="min-h-screen overflow-hidden text-white scroll-auto">
+        <Navbar />
+        
+        {/* Hero Section */}
+        <Hero />
+        
+        {/* Other Sections */}
+        <Featured />
+        <Testimonial />
+        <Pricing />
+        <AboutUs />
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
 
-function AboutLayout() {
+function AboutPageLayout() {
   return (
-    <div className="min-h-screen overflow-hidden text-white scroll-auto">
-      {/* Navbar */}
-      <Navbar />
-      
-      {/* About Page Content */}
-      <About />
-      
-      {/* Common Footer */}
-      <Footer />
-    </div>
+    <ErrorBoundary>
+      <div className="min-h-screen overflow-hidden text-white scroll-auto">
+        <Navbar />
+        
+        {/* About Page Content */}
+        <About />
+        
+        {/* Common Footer */}
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
 
 function WorksLayout() {
   return (
-    <div className="min-h-screen overflow-hidden text-white scroll-auto">
-      {/* Navbar */}
-      <Navbar />
-      
-      {/* Works Page Content */}
-      <Work />
-      
-      {/* Common Footer */}
-      <Footer />
-    </div>
+    <ErrorBoundary>
+      <div className="min-h-screen overflow-hidden text-white scroll-auto">
+        <Navbar />
+        
+        {/* Works Page Content */}
+        <Work />
+        
+        {/* Common Footer */}
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
 
 function ContactLayout() {
   return (
-    <div className="min-h-screen overflow-hidden text-white scroll-auto">
-      {/* Navbar */}
-      <Navbar />
-      
-      {/* Contact Page Content */}
-      <Contact />
-      
-      {/* Common Footer */}
-      <Footer />
-    </div>
+    <ErrorBoundary>
+      <div className="min-h-screen overflow-hidden text-white scroll-auto">
+        <Navbar />
+        
+        {/* Contact Page Content */}
+        <Contact />
+        
+        {/* Common Footer */}
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 }
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomeLayout />} />
-        <Route path="/about" element={<AboutLayout />} />
-        <Route path="/works" element={<WorksLayout />} />
-        <Route path="/contact" element={<ContactLayout />} />
-      </Routes>
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <HomeLayout />
+            </Suspense>
+          } />
+          <Route path="/about" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <AboutPageLayout />
+            </Suspense>
+          } />
+          <Route path="/works" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <WorksLayout />
+            </Suspense>
+          } />
+          <Route path="/contact" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ContactLayout />
+            </Suspense>
+          } />
+        </Routes>
+      </BrowserRouter>
+    </ErrorBoundary>
   );
 }
 
