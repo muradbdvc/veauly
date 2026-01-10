@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import './Card.css';
 
 const Card = ({ 
   children, 
@@ -9,20 +7,27 @@ const Card = ({
   className = '', 
   ...props 
 }) => {
-  const baseClasses = `card card--${variant} card--padding-${padding} ${className}`;
+  const baseClasses = 'rounded-xl transition-all duration-200';
+  
+  const variantClasses = {
+    default: 'bg-white shadow-md',
+    outlined: 'bg-white border border-gray-200 shadow-sm',
+    elevated: 'bg-white shadow-lg'
+  };
+  
+  const paddingClasses = {
+    small: 'p-4',
+    medium: 'p-6',
+    large: 'p-8'
+  };
+  
+  const finalClassName = `${baseClasses} ${variantClasses[variant]} ${paddingClasses[padding]} ${className}`;
   
   return (
-    <div className={baseClasses} {...props}>
+    <div className={finalClassName} {...props}>
       {children}
     </div>
   );
-};
-
-Card.propTypes = {
-  children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['default', 'outlined', 'elevated']),
-  padding: PropTypes.oneOf(['small', 'medium', 'large']),
-  className: PropTypes.string,
 };
 
 export default React.memo(Card);

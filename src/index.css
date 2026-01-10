@@ -83,21 +83,41 @@
   @apply bg-linear-to-b from-blue-700 to-zinc-700 font-outfit p-6 rounded-3xl;
 }
 
-/* Global navbar styles */
-.navbar_wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: #000;
-}
-
-/* About page styles */
-.about-page {
-  min-height: 100vh;
-  padding-top: 80px; /* Account for fixed navbar */
-}
-.footer-brand-name {
-  @apply bg-linear-to-r from-blue-700 to-zinc-900 bg-clip-text text-transparent;
+/* Glass morphism utilities */
+@layer components {
+  .glass-morphism {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+  }
+  
+  .glass-morphism-dark {
+    @apply bg-black/10 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+  
+  /* Custom gradients */
+  .radial-gradient-violet {
+    background-image: radial-gradient(circle farthest-corner at 100% 100%, #4f47d6 44%, #201919);
+  }
+  
+  .gradient-violet-dark {
+    background-image: linear-gradient(180deg, #201919, #4f47d6);
+  }
+  
+  /* Active state utilities */
+  .nav-active {
+    @apply bg-white/10;
+  }
+  
+  /* Global navbar styles */
+  .navbar_wrapper {
+    @apply fixed top-0 left-0 right-0 z-50 bg-black;
+  }
+  
+  /* About page styles */
+  .about-page {
+    @apply min-h-screen pt-20; /* Account for fixed navbar */
+  }
+  
+  .footer-brand-name {
+    @apply bg-gradient-to-r from-blue-700 to-zinc-900 bg-clip-text text-transparent;
+  }
 }

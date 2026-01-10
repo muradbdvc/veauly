@@ -4,10 +4,10 @@ import { Suspense, lazy } from "react";
 import Hero from "./components/hero/Hero";
 import Testimonial from "./components/testimonial/Testimonial";
 import Pricing from "./components/pricing/Pricing";
-import Featured from "./components/featured/Featured";
+import Featured from "./components/featured";
 import AboutUs from "./components/aboutus";
 import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/footer";
 import ErrorBoundary from "./components/ui/ErrorBoundary";
 
 //pages

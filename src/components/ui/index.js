@@ -1,3 +1,4 @@
-export { default as Button } from './Button';
-export { default as Card } from './Card';
-export { default as ErrorBoundary } from './ErrorBoundary';
+// Reusable UI components exports
+export { default as Button } from './Button.jsx';
+export { default as Card } from './Card.jsx';
+export { default as ErrorBoundary } from './ErrorBoundary.jsx';

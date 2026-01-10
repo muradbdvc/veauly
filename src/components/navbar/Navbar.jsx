@@ -1,57 +1,51 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { navItems } from '../../data';
-import './Navbar.scss';
 
 const Navbar = ({ className: wrapperClassName = '' }) => {
   return (
     <div className={`navbar_wrapper ${wrapperClassName}`}>
       {/* Logo Section */}
-      <div className="navbar__logo-wrap-2">
-        <NavLink to="/" className="navbar__link btn-wrap w-inline-block">
-          <div className="text-block-2">Veauly</div>
+      <div className="absolute top-8 left-8 z-[51]">
+        <NavLink 
+          to="/" 
+          className="text-white text-2xl font-bold hover:text-gray-300 transition-colors"
+        >
+          Veauly
         </NavLink>
       </div>
- 
+      
       {/* Navigation Menu */}
-      <div className="navbar_outline">
-        <div className="nav-wrapper glowing-wrapper-active menu">
-          <nav className="menu">
-            <ul className="navroad menu">
-              {navItems.map((item, index) => {
-                return (
-                  <li key={item.id}>
-                    {item.label === 'Contact' ? (
-                      <NavLink 
-                        to="/contact" 
-                        className="button-contact w-inline-block"
-                      >
-                        <div className="button__inner">
-                          <div className="button__text">{item.label}</div>
-                        </div>
-                      </NavLink>
-                    ) : (
-                      <NavLink 
-                        to={item.url} 
-                        className="navbar_button w-inline-block"
-                      >
-                        <div className="navbar_button-text">{item.label}</div>
-                      </NavLink>
-                    )}  
-                  </li>
-                );
-              })}
-            </ul>
+      <div className="relative flex justify-center items-center py-8">
+        <div className="glass-morphism-dark">
+          <nav className="flex items-center gap-8">
+            {navItems.map((item) => (
+              <li key={item.id} className="list-none">
+                {item.label === 'Contact' ? (
+                  <NavLink 
+                    to="/contact" 
+                    className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 rounded-lg transition-all duration-200 inline-block font-medium"
+                  >
+                    {item.label}
+                  </NavLink>
+                ) : (
+                  <NavLink 
+                    to={item.url} 
+                    className={({ isActive }) => `
+                      text-white hover:bg-white/10 px-6 py-4 rounded-lg transition-all duration-200 inline-block font-medium
+                      ${isActive ? 'bg-white/20' : ''}
+                    `}
+                  >
+                    {item.label}
+                  </NavLink>
+                )}  
+              </li>
+            ))}
           </nav>
         </div>
       </div>
     </div>
   );
-};
-
-Navbar.propTypes = {
-  className: PropTypes.string,
 };
 
 export default Navbar;
