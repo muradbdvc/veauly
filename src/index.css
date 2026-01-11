@@ -109,7 +109,7 @@
   
   /* Global navbar styles */
   .navbar_wrapper {
-    @apply fixed top-0 left-0 right-0 z-50 bg-black;
+    @apply fixed top-0 left-0 right-0 z-50 bg-transparent;
   }
   
   /* About page styles */
