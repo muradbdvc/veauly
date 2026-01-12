@@ -24,7 +24,7 @@ const Navbar = ({ className: wrapperClassName = '' }) => {
                 {item.label === 'Contact' ? (
                   <NavLink 
                     to="/contact" 
-                    className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 rounded-lg transition-all duration-200 inline-block font-medium"
+                    className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 rounded-full transition-all duration-200 inline-block font-medium"
                   >
                     {item.label}
                   </NavLink>
@@ -32,7 +32,7 @@ const Navbar = ({ className: wrapperClassName = '' }) => {
                   <NavLink 
                     to={item.url} 
                     className={({ isActive }) => `
-                      text-white hover:bg-white/10 px-6 py-4 rounded-lg transition-all duration-200 inline-block font-medium
+                      text-white hover:bg-white/10 px-6 py-4 rounded-full transition-all duration-200 inline-block font-medium
                       ${isActive ? 'bg-white/20' : ''}
                     `}
                   >

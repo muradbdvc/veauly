@@ -6,7 +6,7 @@ import Testimonial from "./components/testimonial/Testimonial";
 import Pricing from "./components/pricing/Pricing";
 import Featured from "./components/featured";
 import AboutUs from "./components/aboutus";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/navbar/";
 import Footer from "./components/footer";
 import ErrorBoundary from "./components/ui/ErrorBoundary";
 
@@ -15,6 +15,7 @@ const Home = lazy(() => import("./components/pages/Home"));
 const About = lazy(() => import("./components/pages/About"));
 const Work = lazy(() => import("./components/pages/Work"));
 const Contact = lazy(() => import("./components/pages/Contact"));
+const NotFound = lazy(() => import("./components/pages/NotFound"));
 
 function HomeLayout() {
   return (
@@ -107,6 +108,11 @@ function App() {
           <Route path="/contact" element={
             <Suspense fallback={<div>Loading...</div>}>
               <ContactLayout />
+            </Suspense>
+          } />
+          <Route path="*" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <NotFound />
             </Suspense>
           } />
         </Routes>

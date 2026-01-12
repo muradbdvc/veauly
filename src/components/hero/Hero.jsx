@@ -53,28 +53,7 @@ const Hero = () => {
               position: 'relative'
             }}
           />
-          
-          {/* Blur Ellipse */}
-          <div 
-            className="blurelipse"
-            style={{
-              zIndex: 0,
-              aspectRatio: 1,
-              opacity: 1,
-              filter: 'blur(10rem)',
-              backgroundColor: 'rgba(206, 206, 206, 0.2)',
-              borderRadius: '50%',
-              width: '60%',
-              position: 'absolute',
-              bottom: '50%',
-              left: '50%',
-              right: 'auto',
-              transform: 'translate(-50%, 50%)'
-            }}
-          ></div>
-        </div>
-        
-        {/* Content Container */}
+          {/* Content Container */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col justify-center">
           {/* Title Container */}
           <div className="herotitle text-center mb-8">
@@ -127,6 +106,28 @@ const Hero = () => {
             </div>
           </div>
         </div>
+          
+          {/* Blur Ellipse */}
+          <div 
+            className="blurelipse"
+            style={{
+              zIndex: 0,
+              aspectRatio: 1,
+              opacity: 1,
+              filter: 'blur(10rem)',
+              backgroundColor: 'rgba(206, 206, 206, 0.2)',
+              borderRadius: '50%',
+              width: '60%',
+              position: 'absolute',
+              bottom: '50%',
+              left: '50%',
+              right: 'auto',
+              transform: 'translate(-50%, 50%)'
+            }}
+          ></div>
+        </div>
+        
+        
       </div>
       
       {/* Responsive Styles */}
