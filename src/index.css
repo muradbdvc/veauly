@@ -86,11 +86,11 @@
 /* Glass morphism utilities */
 @layer components {
   .glass-morphism {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl;
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl;
   }
   
   .glass-morphism-dark {
-    @apply bg-black/10 backdrop-blur-md border border-white/10 rounded-2xl;
+    @apply bg-black/10 backdrop-blur-md border border-white/10 rounded-3xl;
   }
   
   /* Custom gradients */
