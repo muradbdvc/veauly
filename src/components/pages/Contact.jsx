@@ -1,150 +1,149 @@
-import React, { useState } from "react";
+import React from "react";
+import { Button } from "../ui";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-  };
-
   return (
-    <div className="about-page">
-      <div className="container">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">Get in Touch</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to start your next project? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-            </p>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors"
-                  placeholder="What's this about?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-colors resize-none"
-                  placeholder="Tell us about your project..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full md:w-auto px-8 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors"
+    <div className="min-h-screen bg-black text-white">
+      {/* Header Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold mb-16 text-center">Contact</h1>
+          
+          {/* Contact Information Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto mb-20">
+            {/* Founder */}
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-4">Founder</h3>
+              <p className="text-gray-300 mb-2">+549 (11111111111)</p>
+              <a 
+                href="mailto:nicodurso.design@gmail.com?subject=Hi"
+                className="text-violet-400 hover:text-violet-300 transition-colors duration-300"
               >
-                Send Message
-              </button>
-            </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-              <p className="text-gray-600">hello@veauly.com</p>
+                nicodurso.design@gmail.com
+              </a>
             </div>
             
+            {/* Co-Founder */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-              <p className="text-gray-600">+1 (555) 123-4567</p>
+              <h3 className="text-2xl font-semibold mb-4">Co-Founder</h3>
+              <p className="text-gray-300 mb-2">+549 (11111111111)</p>
+              <a 
+                href="mailto:nicodurso.design@gmail.com?subject=Hi"
+                className="text-violet-400 hover:text-violet-300 transition-colors duration-300"
+              >
+                nicodurso.design@gmail.com
+              </a>
             </div>
             
+            {/* Address */}
             <div className="text-center">
-              <div className="w-16 h-16 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
-              <p className="text-gray-600">San Francisco, CA</p>
+              <h3 className="text-2xl font-semibold mb-4">Adress</h3>
+              <p className="text-gray-300">
+                Random Direction 234, United States
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Contact Hero Image */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <img 
+              src="https://cdn.prod.website-files.com/68bf26087df8b22fd8bdbedd/690cf09ad3944b4e59043359_pexels-artem-korsakov-132129914-11117503.jpg"
+              alt="Contact"
+              className="w-full rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Get In Touch Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="space-y-4 mb-16">
+            <h2 className="text-5xl md:text-7xl font-bold">Get</h2>
+            <h2 className="text-5xl md:text-7xl font-bold">In</h2>
+            <h2 className="text-5xl md:text-7xl font-bold">Touch</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="text-5xl md:text-7xl font-bold">Get</div>
+            <div className="text-5xl md:text-7xl font-bold">In</div>
+            <div className="text-5xl md:text-7xl font-bold">Touch</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Work With Us Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">Why Work With Us</h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold">Why us?</h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Elevate your brand with a studio that brings strategy, design, motion, and technology together — delivering visuals that stand out, stories that resonate, and digital experiences built to perform.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Choosing right studio matters — especially when your brand needs to stand out, move, and perform. We combine design, motion, and web to deliver work that makes an instant impact and keeps your audience engaged.
+              </p>
+            </div>
+            
+            {/* Right Content - Metrics */}
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold">Metrics</h3>
+              
+              {/* Image */}
+              <div className="mb-8">
+                <img 
+                  src="https://cdn.prod.website-files.com/68bf26087df8b22fd8bdbedd/693a9fa6d9bcfacb7be41b86_G7PqVf3LeT01PlfKnJ8iHiSz4.avif"
+                  alt="Person working on laptop"
+                  className="w-full rounded-lg"
+                />
+              </div>
+              
+              {/* Client Avatars */}
+              <div className="flex justify-center space-x-4 mb-8">
+                <img 
+                  src="https://cdn.prod.website-files.com/69178967f7256e45b37c3bb5/69178967f7256e45b37c3ee0_avatar-sophie-moore-testimonials-webflow-cloneable-template-brix-templates.jpg"
+                  alt="Client 1"
+                  className="w-16 h-16 rounded-full"
+                />
+                <img 
+                  src="https://cdn.prod.website-files.com/69178967f7256e45b37c3bb5/69178967f7256e45b37c3edf_avatar-mike-warren-testimonials-webflow-cloneable-template-brix-templates.jpg"
+                  alt="Client 2"
+                  className="w-16 h-16 rounded-full"
+                />
+                <img 
+                  src="https://cdn.prod.website-files.com/69178967f7256e45b37c3bb5/69178967f7256e45b37c3ee1_avatar-adam-smith-testimonials-webflow-cloneable-template-brix-templates.jpg"
+                  alt="Client 3"
+                  className="w-16 h-16 rounded-full"
+                />
+              </div>
+              
+              {/* Stats */}
+              <p className="text-2xl font-bold text-center">2M+ Happy Clients</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Let's Talk CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">Let's Talk</h2>
+          <Link to="/contact">
+            <Button variant="primary" size="large" className="text-lg px-12 py-4">
+              Start
+            </Button>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };
