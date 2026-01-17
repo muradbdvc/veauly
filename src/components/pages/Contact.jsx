@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Header Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -15,10 +15,10 @@ const Contact = () => {
             {/* Founder */}
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Founder</h3>
-              <p className="text-gray-300 mb-2">+549 (11111111111)</p>
+              <p className="text-gray-700 mb-2">+549 (11111111111)</p>
               <a 
                 href="mailto:nicodurso.design@gmail.com?subject=Hi"
-                className="text-violet-400 hover:text-violet-300 transition-colors duration-300"
+                className="text-violet-600 hover:text-violet-700 transition-colors duration-300"
               >
                 nicodurso.design@gmail.com
               </a>
@@ -27,10 +27,10 @@ const Contact = () => {
             {/* Co-Founder */}
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Co-Founder</h3>
-              <p className="text-gray-300 mb-2">+549 (11111111111)</p>
+              <p className="text-gray-700 mb-2">+549 (11111111111)</p>
               <a 
                 href="mailto:nicodurso.design@gmail.com?subject=Hi"
-                className="text-violet-400 hover:text-violet-300 transition-colors duration-300"
+                className="text-violet-600 hover:text-violet-700 transition-colors duration-300"
               >
                 nicodurso.design@gmail.com
               </a>
@@ -39,7 +39,7 @@ const Contact = () => {
             {/* Address */}
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">Adress</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-700">
                 Random Direction 234, United States
               </p>
             </div>
@@ -86,10 +86,10 @@ const Contact = () => {
             {/* Left Content */}
             <div className="space-y-8">
               <h3 className="text-3xl font-bold">Why us?</h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 Elevate your brand with a studio that brings strategy, design, motion, and technology together — delivering visuals that stand out, stories that resonate, and digital experiences built to perform.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 Choosing right studio matters — especially when your brand needs to stand out, move, and perform. We combine design, motion, and web to deliver work that makes an instant impact and keeps your audience engaged.
               </p>
             </div>

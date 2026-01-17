@@ -72,7 +72,7 @@ function WorksLayout() {
 function ContactLayout() {
   return (
     <ErrorBoundary>
-      <div className="min-h-screen overflow-hidden text-white scroll-auto">
+      <div className="min-h-screen overflow-hidden text-white bg-white scroll-auto">
         <Navbar />
         
         {/* Contact Page Content */}
