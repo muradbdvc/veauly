@@ -18,7 +18,7 @@ const Navbar = ({ className: wrapperClassName = '' }) => {
       {/* Navigation Menu */}
       <div className="relative flex justify-center items-center py-8">
         <div className="glass-morphism-dark">
-          <nav className="flex items-center gap-8">
+          <nav className="flex items-center gap-3">
             {navItems.map((item) => (
               <li key={item.id} className="list-none">
                 {item.label === 'Contact' ? (

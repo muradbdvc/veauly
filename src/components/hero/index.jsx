@@ -1,69 +1,32 @@
 import React from 'react';
-import Heroimg from './../../assets/hero.png'
+import Heroimg from './../../assets/hero.png';
+import './herocss.scss';
 
 const Hero = () => {
   return (
-    <div className="hero-site bg-black" style={{
-      opacity: 1,
-      pointerEvents: 'auto',
-      backgroundColor: '#000',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
-      minHeight: '350vh',
-      position: 'relative',
-      overflow: 'visible'
-    }}>
-      <div className="herosite" style={{
-        zIndex: 1,
-        gridColumnGap: '1px',
-        gridRowGap: '1px',
-        backgroundColor: 'transparent',
-        flexFlow: 'column',
-        gridTemplateRows: 'auto',
-        gridTemplateColumns: '1.5fr 1fr',
-        gridAutoColumns: '1fr',
-        justifyContent: 'center',
-        placeItems: 'center stretch',
-        width: '100%',
-        height: '100vh',
-        minHeight: 'auto',
-        display: 'flex',
-        position: 'relative'
-      }}>
+    <div className="hero-site bg-black" >
+      <div className="herosite">
         {/* Hero Image Container */}
-        <div className="hero-imagecontainer" style={{
-          mixBlendMode: 'normal',
-          backgroundColor: '#110d5a',
-          width: '100%',
-          maxWidth: 'none',
-          height: '100%',
-          position: 'relative'
-        }}>
+        <div className="hero-image container">
           <img 
             loading="lazy" 
             src={Heroimg}
             alt="Hero Photography" 
             className="imagehero"
-            style={{
-              zIndex: 1,
-              mixBlendMode: 'luminosity',
-              objectFit: 'contain',
-              width: '100%',
-              height: '100%',
-              position: 'relative'
-            }}
           />
           {/* Content Container */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col justify-center">
+        <div className="z-10 w-full max-w-7xl mx-auto px-4 flex flex-col justify-center">
           {/* Title Container */}
-          <div className="herotitle text-center mb-8">
+          <div className="herotitle absolute top-65 left-50 right-50 z-100 text-center mb-8">
             <h1 
-              className="text-hero-2 text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight"
+              className="text-hero-2 font-normal text-white tracking-tight"
               style={{
-                fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                //fontFamily: 'Inter, sans-serif',
+                //fontWeight: 700,
+                fontSize:'180px',
                 transform: 'translateY(0)',
-                opacity: 1
+                opacity: 1,
+                letterSpacing: '0.04em'
               }}
             >
               Veauly
@@ -71,7 +34,7 @@ const Hero = () => {
           </div>
           
           {/* Description Container */}
-          <div className="hero-bot-content max-w-4xl mx-auto mb-16">
+          <div className="absolute bottom-20 left-30 right-30 hidden  hero-bot-content max-w-4xl mx-auto mb-16">
             <p className="text-white/90 text-lg md:text-xl text-center px-4">
               For over a decade, we've partnered worldwide with founders to shape bold identities that redefine markets.
             </p>
@@ -93,16 +56,17 @@ const Hero = () => {
             
             {/* Services */}
             <div 
-              className="contentservices flex flex-wrap justify-center gap-4 md:gap-8 text-white text-base md:text-lg font-light"
+              className="contentservices flex flex-col justify-center gap-2 md:gap-2 text-white text-base md:text-lg font-light"
               style={{
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: 300,
-                letterSpacing: '0.02em'
+                letterSpacing: '0.02em',
+                fontSize: '16px',
               }}
             >
-              <span className="border-l border-white/30 pl-4 md:pl-8">UX/UI Design</span>
-              <span className="border-l border-white/30 pl-4 md:pl-8">Development</span>
-              <span className="border-l border-white/30 pl-4 md:pl-8">Management</span>
+              <span>UX/UI Design</span>
+              <span>Development</span>
+              <span>Management</span>
             </div>
           </div>
         </div>
@@ -110,20 +74,6 @@ const Hero = () => {
           {/* Blur Ellipse */}
           <div 
             className="blurelipse"
-            style={{
-              zIndex: 0,
-              aspectRatio: 1,
-              opacity: 1,
-              filter: 'blur(10rem)',
-              backgroundColor: 'rgba(206, 206, 206, 0.2)',
-              borderRadius: '50%',
-              width: '60%',
-              position: 'absolute',
-              bottom: '50%',
-              left: '50%',
-              right: 'auto',
-              transform: 'translate(-50%, 50%)'
-            }}
           ></div>
         </div>
         
@@ -131,8 +81,8 @@ const Hero = () => {
       </div>
       
       {/* Responsive Styles */}
-      <style jsx>{`
-        @media (max-width: 479px) {
+      <style jsx>{
+       /* @media (max-width: 479px) {
           .imagehero {
             object-fit: cover !important;
             object-position: 50% 50% !important;
@@ -183,7 +133,7 @@ const Hero = () => {
             display: flex !important;
           }
         }
-      `}</style>
+      */}</style>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import Hero from "./components/hero/Hero";
+import Hero from "./components/hero";
 import Testimonial from "./components/testimonial/Testimonial";
-import Pricing from "./components/pricing/Pricing";
+import Pricing from "./components/pricing";
 import Featured from "./components/featured";
 import AboutUs from "./components/aboutus";
 import Navbar from "./components/navbar/";
