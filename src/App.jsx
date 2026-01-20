@@ -9,6 +9,7 @@ import AboutUs from "./components/aboutus";
 import Navbar from "./components/navbar/";
 import Footer from "./components/footer";
 import ErrorBoundary from "./components/ui/ErrorBoundary";
+import Profile from "./components/profile";
 
 //pages
 const Home = lazy(() => import("./components/pages/Home"));
@@ -85,6 +86,22 @@ function ContactLayout() {
   );
 }
 
+function ProfileLayout() {
+  return (
+    <ErrorBoundary>
+      <div className="min-h-screen overflow-hidden text-white scroll-auto">
+        <Navbar />
+        
+        {/* Profile Page Content */}
+        <Profile />
+        
+        {/* Common Footer */}
+        <Footer />
+      </div>
+    </ErrorBoundary>
+  );
+}
+
 function App() {
   return (
     <ErrorBoundary>
@@ -108,6 +125,11 @@ function App() {
           <Route path="/contact" element={
             <Suspense fallback={<div>Loading...</div>}>
               <ContactLayout />
+            </Suspense>
+          } />
+          <Route path="/profile" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <ProfileLayout />
             </Suspense>
           } />
           <Route path="*" element={
