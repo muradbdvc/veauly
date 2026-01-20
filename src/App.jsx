@@ -27,6 +27,9 @@ function HomeLayout() {
         {/* Hero Section */}
         <Hero />
         
+        {/* Profile Section */}
+        <Profile />
+        
         {/* Other Sections */}
         <Featured />
         <Testimonial />
