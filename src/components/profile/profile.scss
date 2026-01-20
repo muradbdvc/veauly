@@ -1,0 +1,246 @@
+.profile-section {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.profile-hero {
+  padding: 120px 0 80px;
+  position: relative;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .profile-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .profile-title {
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 40px;
+    letter-spacing: 0.02em;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .profile-subtitle {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    letter-spacing: 0.01em;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .profile-description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+.expertise-section {
+  padding: 100px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .expertise-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+  }
+
+  .expertise-title {
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .expertise-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 0.01em;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.8;
+  }
+
+  .year-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  .expertise-image {
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .expertise-content {
+    text-align: center;
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .expertise-text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    font-family: 'Inter', sans-serif;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .studio-badge {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .studio-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .creative {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .registered {
+    font-size: 18px;
+    opacity: 0.7;
+    vertical-align: super;
+  }
+
+  .studio {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .profile-hero {
+    padding: 80px 0 60px;
+
+    .profile-title {
+      font-size: 60px;
+    }
+
+    .profile-subtitle {
+      font-size: 24px;
+    }
+
+    .profile-description {
+      font-size: 16px;
+    }
+  }
+
+  .expertise-section {
+    padding: 60px 0;
+
+    .expertise-title {
+      font-size: 48px;
+    }
+
+    .expertise-subtitle {
+      font-size: 18px;
+    }
+
+    .expertise-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+
+    .expertise-text {
+      font-size: 16px;
+    }
+
+    .creative,
+    .studio {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-hero {
+    padding: 60px 0 40px;
+
+    .profile-title {
+      font-size: 48px;
+    }
+
+    .profile-subtitle {
+      font-size: 20px;
+    }
+  }
+
+  .expertise-section {
+    padding: 40px 0;
+
+    .expertise-title {
+      font-size: 36px;
+    }
+
+    .expertise-subtitle {
+      font-size: 16px;
+    }
+  }
+}

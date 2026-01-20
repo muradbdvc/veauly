@@ -4,7 +4,7 @@ import './herocss.scss';
 
 const Hero = () => {
   return (
-    <div className="hero-site bg-black" >
+    <div className="hero-site bg-black h-screen" >
       <div className="herosite">
         {/* Hero Image Container */}
         <div className="hero-image container">
