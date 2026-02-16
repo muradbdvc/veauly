@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-white text-black">
-      <div  className="grid grid-col-3">
+      <div  className="grid grid-cols-3 gap-4">
         <div className="col-span-2">
           {/* Header Section */}
           <section className="py-20 px-4">
@@ -13,7 +13,7 @@ const Contact = () => {
               <h1 className="text-5xl md:text-7xl font-bold mb-16 text-center">Contact</h1>
               
               {/* Contact Information Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto mb-20">
+              <div className="flex flex-col md:flex-col gap-12 max-w-4xl mx-auto mb-20">
                 {/* Founder */}
                 <div className="text-center">
                   <h3 className="text-2xl font-semibold mb-4">Founder</h3>
