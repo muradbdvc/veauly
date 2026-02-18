@@ -9,12 +9,17 @@ const Profile = () => {
         <div className="container">
           <div className="profile-content">
             <h1 className="profile-title">Profile</h1>
-            <p className="profile-subtitle">
+            <p className="profile-subtitle indent-[3em]">
               We transform bold ideas into standout brands through strategy, design, and marketing — all seamlessly integrated
             </p>
-            <p className="profile-description">
-              From day one, our mission has been to craft timeless identities that cut through the noise. Each year we collaborate with five teams to ensure unrivaled attention and dedication
-            </p>
+            <div className='flex flex-row gap-[40em]'>
+              <p className="profile-description">
+                From day one, our mission has been to craft timeless identities that cut through the noise. Each year we collaborate with five teams to ensure unrivaled attention and dedication
+              </p>
+              <p className="profile-description">
+                From day one, our mission has been to craft timeless identities that cut through the noise. Each year we collaborate with five teams to ensure unrivaled attention and dedication
+              </p>
+            </div>
           </div>
         </div>
       </section>
