@@ -50,22 +50,24 @@
 .expertise-section {
   padding: 100px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFF;
 
   .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
   }
 
   .expertise-header {
-    text-align: center;
     margin-bottom: 80px;
     position: relative;
+    color: #fff;
   }
 
   .expertise-title {
-    font-size: 80px;
+    font-size: 25px;
     font-weight: 400;
+    color: #fff;
     line-height: 1;
     margin-bottom: 20px;
     letter-spacing: 0.02em;
@@ -73,8 +75,8 @@
   }
 
   .expertise-subtitle {
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 60px;
+    font-weight: 700;
     margin-bottom: 30px;
     letter-spacing: 0.01em;
     font-family: 'Inter', sans-serif;
@@ -84,9 +86,9 @@
   .year-badge {
     display: inline-block;
     padding: 8px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    // border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.05em;
   }
@@ -99,7 +101,6 @@
   }
 
   .expertise-image {
-    overflow: hidden;
     border-radius: 12px;
     aspect-ratio: 1;
 
@@ -126,6 +127,7 @@
   .expertise-text {
     font-size: 18px;
     font-weight: 300;
+    color: #FFF !important;
     line-height: 1.8;
     margin-bottom: 30px;
     opacity: 0.9;
@@ -139,6 +141,7 @@
   .studio-badge {
     text-align: center;
     display: flex;
+    font-size: 160px;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -146,30 +149,48 @@
 
   .studio-text {
     display: flex;
+        font-size: 160px;
     align-items: center;
     justify-content: center;
     gap: 8px;
   }
 
-  .creative {
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    font-family: 'Inter', sans-serif;
+}
+.service-section{
+  .container{
+    max-width: 1600px;
   }
+    .creative {
+      font-size: 360px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .registered {
+      font-size: 360px !important;
+      opacity: 0.7;
+      vertical-align: super;
+    }
+    
+    .studio {
+      font-size: 360px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      font-family: 'Inter', sans-serif;
+    }
+    .service-title{
+      font-weight: 500;
+    }
+    .services{
+      text-align: center;
+      span{
+        font-size: 110px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+    }
 
-  .registered {
-    font-size: 18px;
-    opacity: 0.7;
-    vertical-align: super;
-  }
-
-  .studio {
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    font-family: 'Inter', sans-serif;
-  }
 }
 
 // Responsive Design

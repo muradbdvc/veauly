@@ -25,12 +25,12 @@ const Profile = () => {
       </section>
 
       {/* Expertise Section */}
-      <section className="expertise-section">
+      <section className="expertise-section bg-black">
         <div className="container">
-          <div className="expertise-header">
+          <div className="expertise-header flex flex-row justify-between">
             <h2 className="expertise-title">Expertise</h2>
             <p className="expertise-subtitle">Expertise speaks volumes.</p>
-            <div className="year-badge">2025®</div>
+            <div className="year-badge">2025<sup>®</sup></div>
           </div>
 
           <div className="expertise-grid">
@@ -40,6 +40,9 @@ const Profile = () => {
                 alt="Expertise 1"
                 loading="lazy"
               />
+              <p className="expertise-text indent-[3em] m-10">
+              Our approach blends strategy and design to build brands that stand the test of time. We dive deep into every detail to create meaningful, lasting connections.
+            </p>
             </div>
             <div className="expertise-image">
               <img 
@@ -47,19 +50,19 @@ const Profile = () => {
                 alt="Expertise 2"
                 loading="lazy"
               />
-            </div>
-          </div>
-
-          <div className="expertise-content">
-            <p className="expertise-text">
-              Our approach blends strategy and design to build brands that stand the test of time. We dive deep into every detail to create meaningful, lasting connections.
-            </p>
-            <p className="expertise-text">
+              <p className="expertise-text text-white m-10 indent-[3em]">
               Driven by precision and purpose, we shape bold visual systems that empower brands to lead. Every project reflects our passion for clarity and excellence.
             </p>
+            </div>
+          </div>
           </div>
 
-          <div className="studio-badge">
+
+      </section>
+       {/* Creative Section */}
+      <section className='service-section'>
+        <div className="container">
+          <div className="studio-badge flex flex-row">
             <div className="studio-text">
               <span className="creative">Creative</span>
               <span className="registered">®</span>
@@ -68,7 +71,15 @@ const Profile = () => {
               <span className="studio">Studio</span>
             </div>
           </div>
+          <h2 className="service-title">Service</h2>
+          <div className="services flex flex-col gap-12">
+            <span>Branding</span>
+            <span>Design</span>
+            <span>Marketing</span>
+          </div>
+
         </div>
+        
       </section>
     </div>
   );
