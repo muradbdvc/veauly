@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './profile.scss';
 
 const Profile = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const expertiseRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!expertiseRef.current) return;
+      
+      const rect = expertiseRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const elementHeight = expertiseRef.current.offsetHeight;
+      
+      const start = windowHeight;
+      const end = -elementHeight;
+      const current = rect.top;
+      
+      const progress = Math.max(0, Math.min(1, (start - current) / (start - end)));
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const imageOffset = scrollProgress * 100;
+
   return (
     <div className="profile-section">
       {/* Profile Hero Section */}
@@ -25,39 +52,55 @@ const Profile = () => {
       </section>
 
       {/* Expertise Section */}
-      <section className="expertise-section bg-black">
-        <div className="container">
+      <section className="expertise-section bg-black" ref={expertiseRef}>
+        <div className="">
           <div className="expertise-header flex flex-row justify-between">
             <h2 className="expertise-title">Expertise</h2>
             <p className="expertise-subtitle">Expertise speaks volumes.</p>
             <div className="year-badge">2025<sup>®</sup></div>
           </div>
 
-          <div className="expertise-grid">
-            <div className="expertise-image">
-              <img 
-                src="https://cdn.prod.website-files.com/68bf26087df8b22fd8bdbedd/690cec8f0b2d5d6f89b739e7_pexels-mira-ilina-2151041927-34499716.jpg" 
-                alt="Expertise 1"
-                loading="lazy"
-              />
-              <p className="expertise-text indent-[3em] m-10">
-              Our approach blends strategy and design to build brands that stand the test of time. We dive deep into every detail to create meaningful, lasting connections.
-            </p>
-            </div>
-            <div className="expertise-image">
-              <img 
-                src="https://cdn.prod.website-files.com/68bf26087df8b22fd8bdbedd/690cecdb7684b1b2205ef8f1_pexels-meum-mare-204165854-12639667.jpg" 
-                alt="Expertise 2"
-                loading="lazy"
-              />
-              <p className="expertise-text text-white m-10 indent-[3em]">
-              Driven by precision and purpose, we shape bold visual systems that empower brands to lead. Every project reflects our passion for clarity and excellence.
-            </p>
+          <div className="expertise-slider">
+            <div className="expertise-track" style={{ transform: `translateX(-${imageOffset}px)` }}>
+              <div className="expertise-slide">
+                <div className="expertise-image">
+                  <img 
+                    src="https://cdn.prod.website-files.com/68bf26087df8b22fd8bdbedd/690cec8f0b2d5d6f89b739e7_pexels-mira-ilina-2151041927-34499716.jpg" 
+                    alt="Expertise 1"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="expertise-text indent-[3em] m-10">
+                Our approach blends strategy and design to build brands that stand the test of time. We dive deep into every detail to create meaningful, lasting connections.
+              </p>
+              </div>
+              <div className="expertise-slide">
+                <div className="expertise-image">
+                  <img 
+                    src="https://cdn.prod.website-files.com/68bf26087df8b22fd8bdbedd/690cecdb7684b1b2205ef8f1_pexels-meum-mare-204165854-12639667.jpg" 
+                    alt="Expertise 2"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="expertise-text text-white m-10 indent-[3em]">
+                Driven by precision and purpose, we shape bold visual systems that empower brands to lead. Every project reflects our passion for clarity and excellence.
+              </p>
+              </div>
+              <div className="expertise-slide">
+                <div className="expertise-image">
+                  <img 
+                    src="https://cdn.prod.website-files.com/68bf26087df8b22fd8bdbedd/690cec8f0b2d5d6f89b739e7_pexels-mira-ilina-2151041927-34499716.jpg" 
+                    alt="Expertise 3"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="expertise-text indent-[3em] m-10">
+                Our approach blends strategy and design to build brands that stand the test of time. We dive deep into every detail to create meaningful, lasting connections.
+              </p>
+              </div>
             </div>
           </div>
-          </div>
-
-
+        </div>
       </section>
        {/* Creative Section */}
       <section className='service-section'>
