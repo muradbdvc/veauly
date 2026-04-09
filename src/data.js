@@ -23,6 +23,11 @@ export const navItems = [
   },
   {
     id: 4,
+    label: "Blog",
+    url: "/blogs",
+  },
+  {
+    id: 5,
     label: "Contact",
     url: "/contact",
   },

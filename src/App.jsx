@@ -17,6 +17,8 @@ const About = lazy(() => import("./components/pages/About"));
 const Work = lazy(() => import("./components/pages/Work"));
 const Contact = lazy(() => import("./components/pages/Contact"));
 const NotFound = lazy(() => import("./components/pages/NotFound"));
+const Blogs = lazy(() => import("./components/pages/Blogs"));
+const SingleBlog = lazy(() => import("./components/pages/SingleBlog"));
 
 function HomeLayout() {
   return (
@@ -105,6 +107,30 @@ function ProfileLayout() {
   );
 }
 
+function BlogLayout() {
+  return (
+    <ErrorBoundary>
+      <div className="min-h-screen scroll-auto">
+        <Navbar />
+        <Blogs />
+        <Footer />
+      </div>
+    </ErrorBoundary>
+  );
+}
+
+function SingleBlogLayout() {
+  return (
+    <ErrorBoundary>
+      <div className="min-h-screen scroll-auto">
+        <Navbar />
+        <SingleBlog />
+        <Footer />
+      </div>
+    </ErrorBoundary>
+  );
+}
+
 function App() {
   return (
     <ErrorBoundary>
@@ -133,6 +159,16 @@ function App() {
           <Route path="/profile" element={
             <Suspense fallback={<div>Loading...</div>}>
               <ProfileLayout />
+            </Suspense>
+          } />
+          <Route path="/blogs" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <BlogLayout />
+            </Suspense>
+          } />
+          <Route path="/blogs/:slug" element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <SingleBlogLayout />
             </Suspense>
           } />
           <Route path="*" element={
